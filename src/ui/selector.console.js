@@ -23,10 +23,10 @@ export function selector(question, options) {
 
     function cleanup() {
       process.stdout.write("\x1B[?25h");
+      process.stdout.write("\x1Bc");
       process.stdin.setRawMode(false);
       process.stdin.pause();
       process.stdin.removeListener("keypress", handler);
-      console.log("");
     }
 
     process.stdout.write("\x1B[?25l");
