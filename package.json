@@ -9,7 +9,7 @@
     "dev": "node app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "solitaire83",
   "license": "ISC",
   "packageManager": "pnpm@10.33.0"
 }
