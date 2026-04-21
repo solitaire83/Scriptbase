@@ -1,4 +1,8 @@
 import readline from "readline";
+import { console as cle } from "./style.console.js";
+
+const UNDERLINE = cle.styles.underscore;
+const RESET = cle.styles.reset;
 
 const KEY_UP = "\x1B[A";
 const KEY_DOWN = "\x1B[B";
@@ -17,7 +21,7 @@ export function selector(question, options) {
       process.stdout.write(`\x1B[${options.length + (question ? 1 : 0)}A\x1B[0J`);
       if (question) console.log(question);
       options.forEach((opt, i) => {
-        console.log(`${i === selected ? "> " : "  "}${opt}`);
+        console.log(`${i === selected ? `> ${UNDERLINE}${opt}${RESET}` : `  ${opt}`}`);
       });
     }
 
@@ -32,7 +36,7 @@ export function selector(question, options) {
     process.stdout.write("\x1B[?25l");
     if (question) console.log(question);
     options.forEach((opt, i) => {
-      console.log(`${i === selected ? "> " : "  "}${opt}`);
+      console.log(`${i === selected ? `> ${UNDERLINE}${opt}${RESET}` : `  ${opt}`}`);
     });
 
     readline.emitKeypressEvents(process.stdin);
