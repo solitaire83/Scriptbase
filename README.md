@@ -1,3 +1,6 @@
+<p align="center">
+<img width="460" height="176" src="https://github.com/user-attachments/assets/30e23080-ebf3-4918-8063-be37c06bbfac" />
+</p>
 
 A lightweight CLI framework for building interactive, selection-driven scripts fast. No external dependencies, only nodejs built-ins.
 
